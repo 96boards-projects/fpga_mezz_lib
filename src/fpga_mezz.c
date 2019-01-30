@@ -238,6 +238,8 @@ int pinMode(u_int8_t pin, u_int8_t mode, mraa_i2c_context i2c)
         return FPGA_MEZZ_ERROR;
     }
 
+    return EXIT_SUCCESS;
+
     err_exit:
         printf("MRAA ERROR\n");
         mraa_result_print(status);
@@ -513,6 +515,8 @@ int digitalWrite(u_int8_t pin, u_int8_t state, mraa_i2c_context i2c)
         return FPGA_MEZZ_ERROR;
     }
 
+    return EXIT_SUCCESS;
+
     err_exit:
         printf("MRAA ERROR\n");
         mraa_result_print(status);
@@ -662,6 +666,8 @@ int digitalRead(u_int8_t pin, mraa_i2c_context i2c)
         return FPGA_MEZZ_ERROR;
     }
 
+    return EXIT_SUCCESS;
+
     err_exit:
         printf("MRAA ERROR\n");
         mraa_result_print(status);
@@ -749,6 +755,8 @@ int pinFunction(u_int8_t func_type, u_int8_t func, mraa_i2c_context i2c)
           goto err_exit;
          }
     }
+
+    return EXIT_SUCCESS;
 
     err_exit:
         printf("MRAA ERROR\n");
